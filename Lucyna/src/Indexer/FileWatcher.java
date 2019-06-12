@@ -83,9 +83,7 @@ public class FileWatcher {
                     }
                     else if(kind == ENTRY_DELETE) {
                         System.out.println("Delete Event");
-                        if (childFile.isFile()) indexer.deleteFile(childFile);
-                        else if (childFile.isDirectory())
-                            indexer.deleteFileDirectory(child.toString());
+                        indexer.deleteFile(childFile);
                     }
                     else if(kind == ENTRY_MODIFY) {
                         System.out.println("Modify event");

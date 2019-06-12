@@ -8,6 +8,7 @@ import org.apache.lucene.search.*;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 import static Indexer.IndexerConstants.CONTENT;
 
@@ -39,7 +40,12 @@ public class IndexerSearcher {
     }
 
     public SearchResult searchPhrase(String text, int limit) throws IOException {
-        PhraseQuery query = new PhraseQuery(CONTENT, text);
+        PhraseQuery.Builder builder = new PhraseQuery.Builder();
+
+        Scanner scanner = new Scanner(text);
+        while(scanner.hasNext()) builder.add(new Term(CONTENT, scanner.next()));
+        PhraseQuery query = builder.build();
+
         return search(query, limit);
     }
 
