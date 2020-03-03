@@ -21,4 +21,10 @@ Aby wyszukiwarka działała poprawnie w tle musi działać indekser. Uruchamiamy
 
 Dostępne są następujące polecenia :
 * "fraza" - wyszukuje frazę w monitorowanych plikach zgodnie z ustawioną konfiguracją
-* 
+* %lang pl/en - ustawia język wyszukiwania na polski/angielski
+* %details on/off - włącza lub wyłącza pokazywanie fragmentów plików z wyszukiwanymi frazami
+* %limit "liczba" - ustawia limit wyników wyszukiwań na "liczba"
+* %color on/off - włącza lub wyłącza wyróżnianie znalezionych słów w pokazywanych fragmentach, widoczne tylko po włączeniu details
+* %term - ustawienie trybu wyszukiwarki na wyszukiwanie pojedynczych słów
+* %phrase - ustawienie trybu wyszukiwarki na wyszukiwanie fraz
+* %fuzzy - ustawienie trybu wyszukiwarki na wyszukiwanie niedokładne, tzn. wyszukiwane będą również słowa podobne do wpisanego
